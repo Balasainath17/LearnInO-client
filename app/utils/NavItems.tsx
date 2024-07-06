@@ -32,14 +32,14 @@ type Props = {
 const NavItems: React.FC<Props> = ({activeItem,isMobile}) => {
   return (
     <>
-        <div className="hidden 800px:flex">
+        <div className="hidden 800px:flex space-x-6">
             {
                 navItemsData && navItemsData.map((i,index) => (
                     <Link href={`${i.url}`} key={index} passHref>
                         <span 
                         className={`${
                             activeItem === index? "text-[#cb2056] dark:text-[#7fdba1] " : "text-black dark:text-white "
-                        }text-[18px] px-6 font-Poppins font-[400] transition-colors duration-200 
+                        }text-[18px] px-3 font-Poppins font-[400] transition-colors duration-200 
             hover:text-[#dd4c08] hover:dark:text-[#dba08e]`}
                         >
                             {i.name}
@@ -54,7 +54,7 @@ const NavItems: React.FC<Props> = ({activeItem,isMobile}) => {
                 <div className="800px:hidden mt-5">
                     <div className="w-full text-center py-6">
                         <Link href={"/"} passHref>
-                            <span className={`text-[25px] font-Poppins font-[500] text-black dark:text-white `}>
+                            <span className={`text-[25px] font-Poppins font-[500] text-gradient `}>
                                 LearnInO</span>
                         </Link>
                     </div>
@@ -66,7 +66,7 @@ const NavItems: React.FC<Props> = ({activeItem,isMobile}) => {
                          className={`${
                              activeItem === index? "text-[#cb2056] dark:text-[#7fdba1]  " : "text-black dark:text-white "
                          } block py-5 text-[18px] px-6 font-Poppins font-[400] transition-colors duration-200 
-            hover:text-[#dd4c08] hover:dark:text-[#dba08e]`}
+                        hover:text-[#dd4c08] hover:dark:text-[#dba08e]`}
                          >
                             {i.name}
                          </span> 

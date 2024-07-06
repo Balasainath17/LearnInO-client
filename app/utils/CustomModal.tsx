@@ -18,8 +18,10 @@ const CustomModal: FC<Props> = ({open,setOpen,setRoute,component:Component,refet
     aria-labelledby="modal-modal-title"
     aria-describedby="modal-modal-description"
     >
-      <Box className="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-[450px] bg-white dark:bg-slate-900 rounded-[8px] shadow p-4 outline-none">
-        <Component setOpen={setOpen} setRoute={setRoute} refetch={refetch}/>
+      <Box className="fixed inset-0 flex items-center justify-center p-6">
+        <Box className="relative w-full max-w-[450px] bg-white dark:bg-slate-900 rounded-[8px] shadow p-4 outline-none">
+          <Component setOpen={setOpen} setRoute={setRoute} refetch={refetch} />
+        </Box>
       </Box>
 
     </Modal>

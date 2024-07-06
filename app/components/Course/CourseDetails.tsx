@@ -3,7 +3,7 @@ import CoursePlayer from "@/app/utils/CoursePlayer";
 import Ratings from "@/app/utils/Ratings";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { IoCheckmarkDoneOutline, IoCloseOutline } from "react-icons/io5";
+import {  IoCloseOutline } from "react-icons/io5";
 import { format } from "timeago.js";
 import CourseContentList from "../Course/CourseContentList";
 import { Elements } from "@stripe/react-stripe-js";
@@ -12,6 +12,7 @@ import { useLoadUserQuery } from "@/redux/features/api/apiSlice";
 import Image from "next/image";
 import { VscVerifiedFilled } from "react-icons/vsc";
 import avatarDefault from "../../../public/Images/avatar.png";
+import { MdCheckBox } from "react-icons/md";
 
 type Props = {
   data: any;
@@ -58,7 +59,7 @@ const CourseDetails = ({
       <div className="w-[90%] 800px:w-[90%]  py-5  pl-14 text-justify">
         <div className="w-full flex flex-col-reverse 800px:flex-row">
           <div className="w-full 800px:w-[65%] 800px:pr-5">
-            <h1 className="text-[25px] font-Poppins font-[600] text-black dark:text-white">
+            <h1 className="text-[22px] sm:text-[30px] md:text-[35px] font-Poppins font-[600] text-black dark:text-white">
               {data.name}
             </h1>
             <div className="flex items-center justify-between pt-3">
@@ -74,17 +75,17 @@ const CourseDetails = ({
             </div>
 
             <br />
-            <h1 className="text-[25px] font-Poppins font-[600] text-black dark:text-white">
+            <h1 className="text-[18px] sm:text-[25px] md:text-[28px] font-Poppins font-[600] text-black dark:text-white">
               What are the benefits of this course?
             </h1>
             <div>
               {data.benefits?.map((item: any, index: number) => (
                 <div
-                  className="w-full flex 800px:items-center py-2"
+                  className="w-full flex 800px:items-center py-2 pl-4 text-[12px] sm:text-[16px] md:text-[18px]"
                   key={index}
                 >
                   <div className="w-[15px] mr-1">
-                    <IoCheckmarkDoneOutline
+                    <MdCheckBox 
                       size={20}
                       className="text-black dark:text-white"
                     />
@@ -97,13 +98,13 @@ const CourseDetails = ({
               <br />
               <br />
             </div>
-            <h1 className="text-[25px] font-Poppins font-[600] text-black dark:text-white">
+            <h1 className="text-[18px] sm:text-[25px] md:text-[28px] font-Poppins font-[600] text-black dark:text-white">
               What are the prerequisites for starting this course?
             </h1>
             {data.prerequisites?.map((item: any, index: number) => (
-              <div className="w-full flex 800px:items-center py-2" key={index}>
+              <div className="w-full flex 800px:items-center py-2 pl-4 text-[12px] sm:text-[16px] md:text-[18px]" key={index}>
                 <div className="w-[15px] mr-1">
-                  <IoCheckmarkDoneOutline
+                  <MdCheckBox
                     size={20}
                     className="text-black dark:text-white"
                   />
@@ -161,7 +162,7 @@ const CourseDetails = ({
                           className="w-[50px] h-[50px] rounded-full object-cover"
                         />
                       </div>
-                      <div className="hidden 800px:block pl-2">
+                      <div className="hidden 800px:block  pl-2 ">
                         <div className="flex items-center">
                           <h5 className="text-[18px] pr-2 text-black dark:text-white">
                             {item.user.name}

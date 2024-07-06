@@ -1,5 +1,6 @@
 import React from "react";
 import { styles } from "../styles/style";
+import Image from "next/image";
 
 const About = () => {
   return (
@@ -44,6 +45,23 @@ const About = () => {
           affordable courses, informative videos, and supportive community, the
           sky&apos;s the limit.
         </p>
+        <br />
+        <br />
+        <br />
+        <div className="flex flex-col justify-center items-center text-center">
+        <Image
+            src={require("../../public/Images/bala.jpg")}
+                width={200}
+              height={200}
+            alt=""
+            className="rounded-full border-[6px] border-[#0d39ff]"
+          />
+              <span className="text-[22px] mt-3 font-semibold title-text-gradient">Balasainath</span>
+                <h5 className="text-[18px] font-Poppins mt-2">
+                  Founder of <span className="text-gradient font-[600]">LearnInO</span>
+                </h5>
+                <br />
+        </div>
         <br />
         <br />
       </div>

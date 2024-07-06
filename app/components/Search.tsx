@@ -64,12 +64,12 @@ type Props = {};
                 }
               />
               <br />
-              <div className="w-full flex items-center flex-wrap justify-center">
+              <div className="w-full flex items-center flex-wrap justify-center ">
                 <div
-                  className={`h-[35px] ${
-                    category === "All" ? "bg-[crimson]" : "bg-[#5050cb]"
-                  } m-3 px-3 rounded-[30px] flex items-center justify-center font-Poppins cursor-pointer`}
-                  onClick={() => setCategory("All")}
+                   className={`h-[35px] ${
+          category === "All" ? "bg-[crimson]" : "bg-[#5050cb]"
+        } m-1 sm:m-2 px-3 sm:px-4 rounded-full flex items-center justify-center text-[12px] sm:text-[15px] md:text-[15px] lg:text-[16px] xl:text-[16px] text-white font-Poppins cursor-pointer`}
+        onClick={() => setCategory("All")}
                 >
                   All
                 </div>
@@ -77,12 +77,10 @@ type Props = {};
                   categories.map((item: any, index: number) => (
                     <div key={index}>
                       <div
-                        className={`h-[35px] ${
-                          category === item.title
-                            ? "bg-[crimson]"
-                            : "bg-[#5050cb]"
-                        } m-3 px-3 rounded-[30px] flex items-center justify-center font-Poppins cursor-pointer `}
-                        onClick={() => setCategory(item.title)}
+                       className={`h-[35px] ${
+                        category === item.title ? "bg-[crimson]" : "bg-[#5050cb]"
+                      } m-1 md:m-2 px-2 sm:px-4 rounded-full flex items-center justify-center text-[12px] sm:text-[15px] md:text-[15px] lg:text-[16px] xl:text-[16px] text-white font-Poppins cursor-pointer`}
+                      onClick={() => setCategory(item.title)}
                       >
                         {item.title}
                       </div>

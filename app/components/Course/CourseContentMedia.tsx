@@ -239,7 +239,7 @@ const CourseContentMedia = ({
           <AiOutlineArrowRight className="ml-2" />
         </div>
       </div>
-      <h1 className="pt-2 text-[25px] font-[600] dark:text-white text-black ">
+      <h1 className="pt-2 text-[20px] sm:text-[23px] md:text-[26px] font-[600] dark:text-white text-black ">
         {data[activeVideo].title}
       </h1>
       <br />
