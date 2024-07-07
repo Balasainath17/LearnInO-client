@@ -99,7 +99,7 @@ const SignUp: FC<Props> = ({ setRoute }) => {
         {errors.email && touched.email && (
           <span className="text-red-500 pt-2 block">{errors.email}</span>
         )}
-        <div className="w-full mt-5 relative mb-1">
+        <div className="w-full mt-2 relative mb-1">
           <label className={`${styles.label}`} htmlFor="password">
             Enter your Password
           </label>
@@ -129,7 +129,7 @@ const SignUp: FC<Props> = ({ setRoute }) => {
           )}
         </div>
         {errors.password && touched.password && (
-          <span className="text-red-500 pt-2 block">{errors.password}</span>
+          <span className="text-red-500 pt-1 block">{errors.password}</span>
         )}
         <div className="w-full mt-5">
           <input type="submit" value="Sign Up" className={`${styles.button}`} />

@@ -72,7 +72,7 @@ export const authApi = apiSlice.injectEndpoints({
                 body: {
                     email,
                     name,
-                    avatar
+                    // avatar
                 },
                 credentials: "include" as const,
             }),

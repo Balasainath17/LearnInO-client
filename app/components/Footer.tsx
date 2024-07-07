@@ -58,27 +58,11 @@ const Footer = (props: Props) => {
                   My Account
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/course-dashboard"
-                  className="text-base text-black dark:text-gray-300 dark:hover:text-white"
-                >
-                  Course Dashboard
-                </Link>
-              </li>
             </ul>
           </div>
           <div className="space-y-3">
             <h3 className="text-[20px] font-[600] text-black dark:text-white">Social Links</h3>
             <ul className="space-y-4">
-              {/* <li>
-                <Link
-                  href="https://www.youtube.com/channel/UCHz6Sne9splmvm-q2w1_HWQ"
-                  className="text-base text-black dark:text-gray-300 dark:hover:text-white"
-                >
-                  Youtube
-                </Link>
-              </li> */}
               <li>
                 <Link
                   href="https://www.instagram.com/bala_sainath/"
@@ -92,7 +76,7 @@ const Footer = (props: Props) => {
                   href="https://github.com/Balasainath17"
                   className="text-base text-black dark:text-gray-300 dark:hover:text-white"
                 >
-                  github
+                  Github
                 </Link>
               </li>
             </ul>

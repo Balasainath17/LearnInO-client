@@ -86,8 +86,8 @@ const CourseContentList: FC<Props> = (props) => {
                   const contentLength: number = item.videoLength / 60;
                   return (
                     <div
-                      className={`w-full ${
-                        videoIndex === props.activeVideo ? "bg-slate-800" : ""
+                      className={`w-[90%] ${
+                        videoIndex === props.activeVideo ? "dark:bg-slate-800 bg-[#d89f67]" : ""
                       } cursor-pointer transition-all p-2`}
                       key={item._id}
                       onClick={() => props.isDemo ? null : props?.setActiveVideo(videoIndex)}

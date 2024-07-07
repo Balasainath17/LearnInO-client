@@ -1,5 +1,6 @@
 import React, {FC} from 'react'
 import {Modal,Box} from "@mui/material";
+import { IoCloseOutline } from 'react-icons/io5';
 
 type Props = {
     open: boolean;
@@ -19,7 +20,14 @@ const CustomModal: FC<Props> = ({open,setOpen,setRoute,component:Component,refet
     aria-describedby="modal-modal-description"
     >
       <Box className="fixed inset-0 flex items-center justify-center p-6">
-        <Box className="relative w-full max-w-[450px] bg-white dark:bg-slate-900 rounded-[8px] shadow p-4 outline-none">
+        <Box className="relative w-full max-w-[450px] bg-white dark:bg-slate-900 rounded-[8px] shadow p-4 outline-none over">
+        <div className="w-full flex justify-end">
+                <IoCloseOutline
+                  size={30}
+                  className="dark:text-white text-black cursor-pointer"
+                  onClick={() => setOpen(false)}
+                />
+              </div>
           <Component setOpen={setOpen} setRoute={setRoute} refetch={refetch} />
         </Box>
       </Box>
