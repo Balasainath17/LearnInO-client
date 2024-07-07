@@ -266,16 +266,16 @@ const CourseDetails = ({
       </div>
       <>
         {open && (
-          <div className="w-full h-screen bg-[#00000036] fixed top-0 left-0 z-50 flex items-center justify-center">
-            <div className="w-[500px] min-h-[500px] bg-white rounded-xl shadow p-3">
+          <div className="w-full  bg-[#00000036] fixed mt-14 pt-6 top-0 left-0 z-50 flex items-center justify-center">
+            <div className="w-[90%] sm:w-[70%] md:w-[500px] max-h-[75vh] min-h-[300px] bg-white rounded-md shadow p-4 overflow-y-auto">
               <div className="w-full flex justify-end">
                 <IoCloseOutline
-                  size={40}
+                  size={30}
                   className="text-black cursor-pointer"
                   onClick={() => setOpen(false)}
                 />
               </div>
-              <div className="w-full">
+              <div className="w-full flex flex-col text-[12px] sm:text-[14px]">
                 {stripePromise && clientSecret && (
                   <Elements stripe={stripePromise} options={{ clientSecret }}>
                     <CheckOutForm setOpen={setOpen} data={data} user={user} refetch={refetch} />

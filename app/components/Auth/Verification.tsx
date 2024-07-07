@@ -99,11 +99,11 @@ const Verification: FC<Props> = ({ setRoute }) => {
             type="number"
             key={key}
             ref={inputRefs[index]}
-            className={`w-[65px] h-[65px] bg-transparent border-[3px] rounded-[10px] flex items-center text-black dark:text-white justify-center text-[18px] font-Poppins outline-none text-center ${
+            className={`w-[45px] h-[45px] bg-transparent border-[3px] rounded-[10px] flex items-center text-black dark:text-white justify-center text-[18px] font-Poppins outline-none text-center ${
               invalidError
                 ? "shake border-red-500"
                 : "dark:border-white border-[#0000004a]"
-            } `}
+            } sm:w-[60px] sm:h-[60px] sm:text-[20px]`}
             placeholder=""
             maxLength={1}
             value={verifyNumber[key as keyof VerifyNumber]}
