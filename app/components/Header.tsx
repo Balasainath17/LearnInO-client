@@ -142,7 +142,7 @@ const Header: FC<Props> = ({ activeItem, setOpen, route, open, setRoute }) => {
              onClick={handleClose}
              id="screen"
            >
-             <div className="w-[70%] fixed z-[999999999] h-screen bg-white dark:bg-slate-900 dark:bg-opacity-90 top-0 right-0">
+             <div className="w-[60%] max-w-[250px] 800px:hidden fixed z-[999999999] h-screen bg-[#8fdfcb] dark:bg-slate-900 dark:bg-opacity-90 top-0 right-0">
                <NavItems activeItem={activeItem} isMobile={true} />
                {userData?.user ? (
                  <Link href={"/profile"}>
