@@ -61,7 +61,7 @@ const Login: FC<Props> = ({ setRoute,setOpen,refetch }) => {
 
   return (
     <div className="w-full">
-      <h1 className={`${styles.title}`}>Login with LearnInO</h1>
+      <h1 className={`${styles.title}`}>Login with <span className="title-text-gradient"> LearnInO</span></h1>
       <form onSubmit={handleSubmit}>
         <label className={`${styles.label}`} htmlFor="email">
           Enter your Email
@@ -116,7 +116,7 @@ const Login: FC<Props> = ({ setRoute,setOpen,refetch }) => {
           <input type="submit" value="Login" className={`${styles.button}`} />
         </div>
         <br />
-        <h5 className="text-center pt-4 font-Poppins text-[14px] text-black dark:text-white">
+        {/* <h5 className="text-center pt-4 font-Poppins text-[14px] text-black dark:text-white">
           Or Login with
         </h5>
         <div className="flex items-center justify-center my-3">
@@ -127,7 +127,7 @@ const Login: FC<Props> = ({ setRoute,setOpen,refetch }) => {
             className="cursor-pointer mr-2 dark:fill-white fill-black"
             size={30} onClick={() => signIn("github")}
           />
-        </div>
+        </div> */}
         <h5 className="text-center font-Poppins text-[14px] text-black dark:text-white">
             Not have any account ?{" "}
             <span

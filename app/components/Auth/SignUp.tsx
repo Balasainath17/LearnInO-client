@@ -60,7 +60,7 @@ const SignUp: FC<Props> = ({ setRoute }) => {
 
   return (
     <div className="w-full">
-      <h1 className={`${styles.title}`}>Sign Up to LearnInO</h1>
+      <h1 className={`${styles.title}`}>Sign Up to <span className="title-text-gradient">LearnInO</span></h1>
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
           <label className={`${styles.label}`} htmlFor="email">
@@ -134,7 +134,7 @@ const SignUp: FC<Props> = ({ setRoute }) => {
           <input type="submit" value="Sign Up" className={`${styles.button}`} />
         </div>
         <br />
-        <h5 className="text-center pt-4 font-Poppins text-[14px] text-black dark:text-white">
+        {/* <h5 className="text-center pt-4 font-Poppins text-[14px] text-black dark:text-white">
           Or Sign Up with
         </h5>
         <div className="flex items-center justify-center my-3">
@@ -143,7 +143,7 @@ const SignUp: FC<Props> = ({ setRoute }) => {
           <AiFillGithub
             className="cursor-pointer mr-2 dark:fill-white fill-black"
             size={30} />
-        </div>
+        </div> */}
         <h5 className="text-center font-Poppins text-[14px] text-black dark:text-white">
           Already have an account ?{" "}
           <span
